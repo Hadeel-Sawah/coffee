@@ -7,12 +7,15 @@
 }
 html{
     font-size: 62.3%;
+    overflow: hidden;
+    scroll-behavior: unset;
 }
 :root {
     scroll-behavior: unset;
 }
 body{
     overflow: hidden;
+    scroll-behavior: unset;
 }
 *{
     box-sizing: border-box;
@@ -406,6 +409,6 @@ section{
     z-index: 33333;
 }
 .ups{
-    display: none;
+    opacity: 0;
     bottom: 0;
 }

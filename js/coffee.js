@@ -1,5 +1,3 @@
-
- 
 document.querySelectorAll('.imges-slider img').forEach(images =>{
     images.onclick = () =>{
         var src = images.getAttribute('src');
@@ -58,10 +56,8 @@ var swiper = new Swiper(".review-slider", {
  });
  $(document).ready(function(){
   $("#loding").fadeOut(2000,function(){
-    $("body").css("overflow","visible");
-    // $(window).scrollTop(0);
+    $("body,html").css("overflow","visible");
     $("body,html").animate({scrollTop:0},10)
-    
   })
  });
 
@@ -69,12 +65,11 @@ var swiper = new Swiper(".review-slider", {
  $(window).scroll(function(){
  let upsOffset = $("#About").offset().top;
 
-   if ($(window).scrollTop() > aboutOffset) {
-    $(".ups").fadeIn(2000);
+   if ($(window).scrollTop()> aboutOffset) {
+    $(".ups").css({"opacity":"1",'transitionDuration':'3s'})
    }
    else{
-    $(".ups").fadeOut(2000);
-
+    $(".ups").css({"opacity":"0",'transitionDuration':'2s'})
    }
  })
  $(".nav-link").click(function(){
@@ -84,9 +79,10 @@ var swiper = new Swiper(".review-slider", {
 
  })
  $(".ups").click(function(){
-  $("body,html").animate({scrollTop:0},1000)
+  $("body,html").animate({scrollTop:0},2000)
  });
  $(".nav-link").focus(function(){
    $(this).css("color","#443");
    $(this).siblings().css("color","#0000008c");
  })
+ 
